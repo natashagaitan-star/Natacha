@@ -57,8 +57,10 @@ export function ArtworkCard({
             <p className="label whitespace-nowrap text-ink/70">
               {a.status === "sold" ? (
                 <span className="text-clay">Sold</span>
-              ) : (
+              ) : a.price ? (
                 formatPrice(a.price)
+              ) : (
+                "Inquire"
               )}
             </p>
           </div>

@@ -25,9 +25,10 @@ export default function ShopPage() {
       </Reveal>
       <Reveal delay={0.24}>
         <p className="mt-8 max-w-lg leading-relaxed text-ink/65">
-          Two ways to live with the work: an original — one of one, forever —
-          or a hand-signed limited-edition print. Every piece ships worldwide,
-          insured and professionally packed.
+          Every painting here is an original — one of one, forever. Each ships
+          worldwide, insured and professionally packed, with a signed
+          certificate of authenticity. Acquisitions are handled personally, by
+          letter.
         </p>
       </Reveal>
 
@@ -51,6 +52,16 @@ export default function ShopPage() {
       </section>
 
       {/* Prints */}
+      {prints.length === 0 && (
+        <Reveal className="mt-24 border-t border-ink/12 pt-12">
+          <p className="label text-clay">Limited-edition prints</p>
+          <p className="mt-4 max-w-md text-sm leading-relaxed text-ink/60">
+            Hand-signed archival prints are coming. Join the letter in the
+            footer to hear first when editions open.
+          </p>
+        </Reveal>
+      )}
+      {prints.length > 0 && (
       <section aria-labelledby="shop-prints" className="mt-28">
         <Reveal className="flex items-baseline justify-between gap-6">
           <h2 id="shop-prints" className="display text-3xl md:text-4xl">
@@ -93,6 +104,7 @@ export default function ShopPage() {
           ))}
         </div>
       </section>
+      )}
 
       {/* The promise */}
       <section className="mt-28 grid gap-10 border-t border-ink/12 pt-14 md:grid-cols-3">

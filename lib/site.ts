@@ -3,13 +3,14 @@ export const site = {
   shortName: "Valentina",
   tagline: "Original works",
   // One-line poetic descriptor used in hero + metadata
-  essence: "Paintings of the divine feminine, the night sky, and the dream between them.",
+  essence:
+    "Paintings of the inner world — family, love, memory, and the marks we leave behind.",
   url: "https://natashavalentina.art",
   email: "studio@natashavalentina.art",
   instagram: "https://instagram.com/natashavalentina.art",
   pinterest: "https://pinterest.com/natashavalentinaart",
   locale: "en_US",
-  founded: 2019,
+  founded: 2023,
 };
 
 export const nav = [

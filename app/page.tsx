@@ -8,7 +8,7 @@ import { posts } from "@/lib/journal";
 import { site } from "@/lib/site";
 
 export default function Home() {
-  const hero = artworks.find((a) => a.slug === "the-night-bloom")!;
+  const hero = artworks.find((a) => a.slug === "a-journey-into-his-mind")!;
   const latest = posts.slice(0, 2);
 
   return (
@@ -75,12 +75,12 @@ export default function Home() {
         </Reveal>
         <Reveal delay={0.1}>
           <p className="display mt-10 max-w-4xl text-3xl leading-snug md:text-5xl">
-            Each painting begins as a dream kept past morning —{" "}
+            Each painting begins as something that could not be said out loud —{" "}
             <span className="display-italic text-indigo">
-              a sky, a figure, a garden that insists on being remembered
+              a house, a hand, a heart that insists on being remembered
             </span>{" "}
-            — and ends as an original work made slowly, by hand, in layers of
-            quiet.
+            — and ends as an original work made slowly, honestly, in layers of
+            oil and acrylic.
           </p>
         </Reveal>
       </section>
@@ -121,8 +121,8 @@ export default function Home() {
           <Reveal>
             <p className="label text-gold">Collections</p>
             <h2 className="display mt-5 max-w-2xl text-4xl md:text-6xl">
-              Eight years of work,{" "}
-              <span className="display-italic">six rooms</span>
+              One life,{" "}
+              <span className="display-italic">four rooms</span>
             </h2>
           </Reveal>
           <ul className="mt-16">
@@ -167,17 +167,17 @@ export default function Home() {
             </Reveal>
             <Reveal delay={0.1}>
               <h2 className="display mt-6 text-4xl leading-tight md:text-5xl">
-                Painting is how I{" "}
-                <span className="display-italic">listen.</span>
+                I paint what I can't{" "}
+                <span className="display-italic">say out loud.</span>
               </h2>
             </Reveal>
             <Reveal delay={0.2}>
               <p className="mt-8 max-w-md leading-relaxed text-ink/70">
-                Natasha Valentina paints the places where the inner world and
-                the night sky agree — moons held like children, gardens that
-                bloom after dark, rivers that already know the way. Each work
-                is an original, made in her hillside studio between dusk and
-                deep night.
+                Natasha Valentina paints the inner world in oils and acrylics —
+                family and its inheritances, love and its afterlife, hands
+                pressed into paint as proof of being here. Every canvas is an
+                original, begun in California light and finished wherever the
+                feeling insists.
               </p>
             </Reveal>
             <Reveal delay={0.3}>

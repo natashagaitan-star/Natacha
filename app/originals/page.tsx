@@ -1,17 +1,15 @@
 import type { Metadata } from "next";
 import { ArtworkCard } from "@/components/ArtworkCard";
 import { Reveal, DrawnLine } from "@/components/Reveal";
-import { artworks, available } from "@/lib/artworks";
+import { available, sold } from "@/lib/artworks";
 
 export const metadata: Metadata = {
   title: "Original Paintings",
   description:
-    "Original paintings by Natasha Valentina, available to acquire. Dimensions, medium, and prices for each one-of-a-kind work.",
+    "Original paintings by Natasha Valentina, available to acquire. Dimensions, medium, and acquisition details for each one-of-a-kind work.",
 };
 
 export default function OriginalsPage() {
-  const sold = artworks.filter((a) => a.status === "sold");
-
   return (
     <div className="mx-auto max-w-[1400px] px-6 pt-40 pb-28 md:px-10 md:pt-52 md:pb-40">
       <Reveal>
@@ -47,20 +45,22 @@ export default function OriginalsPage() {
         </div>
       </section>
 
-      <section aria-labelledby="sold-heading" className="mt-28">
-        <Reveal>
-          <h2 id="sold-heading" className="label text-ink/50">
-            In collections · {sold.length} works
-          </h2>
-        </Reveal>
-        <div className="mt-10 grid gap-x-10 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
-          {sold.map((a, i) => (
-            <Reveal key={a.slug} delay={(i % 3) * 0.1}>
-              <ArtworkCard artwork={a} showDetails />
-            </Reveal>
-          ))}
-        </div>
-      </section>
+      {sold.length > 0 && (
+        <section aria-labelledby="sold-heading" className="mt-28">
+          <Reveal>
+            <h2 id="sold-heading" className="label text-ink/50">
+              In collections · {sold.length} works
+            </h2>
+          </Reveal>
+          <div className="mt-10 grid gap-x-10 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
+            {sold.map((a, i) => (
+              <Reveal key={a.slug} delay={(i % 3) * 0.1}>
+                <ArtworkCard artwork={a} showDetails />
+              </Reveal>
+            ))}
+          </div>
+        </section>
+      )}
     </div>
   );
 }

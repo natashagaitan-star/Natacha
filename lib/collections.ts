@@ -9,40 +9,28 @@ export type Collection = {
 
 export const collections: Collection[] = [
   {
-    slug: "celestial",
-    title: "Celestial",
-    line: "Star maps, returning planets, and the comfort of vast things.",
-    note: "The Celestial works began as a way of keeping time. Each painting holds a sky that existed once — a transit, a return, a night worth remembering — rendered not as astronomy but as feeling. These are skies you have stood beneath without knowing their names.",
+    slug: "family-inheritance",
+    title: "Family & Inheritance",
+    line: "The worlds we come from, and the ones we make.",
+    note: "These are the hardest rooms in the house, painted anyway. Fathers, mothers, childhood — the emotional architecture we are handed before we can read the blueprints. The works in this collection use houses, roots, storms, and symbols to say what family rarely says out loud. They were painted as release, and they read that way: honest, unguarded, and finally at peace with being seen.",
   },
   {
-    slug: "divine-feminine",
-    title: "Divine Feminine",
-    line: "The body as vessel, the vessel as altar.",
-    note: "These figures are not portraits. They are the shapes women make when no one is watching — holding, carrying, resting, rising. Painted in clay and rose against the dark, they honour the quiet authority of intuition and the sacredness of simply being a body in the world.",
+    slug: "love-loss",
+    title: "Love & Loss",
+    line: "What the heart builds, keeps, and finally lets go.",
+    note: "A heart painted the size of the canvas, because that is the size it feels. These works trace the full arc — the luminous simplicity of love, the structures we build around it, and the strange afternoon when what once undid you becomes something you can look at calmly, the way you look at a painting on a wall.",
   },
   {
-    slug: "dream-state",
-    title: "Dream State",
-    line: "What the sleeping mind keeps, and what it lets go.",
-    note: "Painted in the hour after waking, before the dream dissolves. The Dream State works are attempts at honesty with a language that resists it — soft fields, floating forms, doors that open onto weather. Nothing here is invented. All of it was seen, briefly.",
+    slug: "marks-we-leave",
+    title: "The Marks We Leave",
+    line: "Hands, footprints, and the proof of being here.",
+    note: "The oldest art on Earth is a handprint on a cave wall, and this collection stands in that lineage without apology. Hands pressed into warmth and darkness, a footprint mid-step, fingers that flower into other lives — each work is a declaration of presence. I was here. I touched things. I kept walking.",
   },
   {
-    slug: "sacred-nature",
-    title: "Sacred Nature",
-    line: "Rivers that know the way. Trees that listen.",
-    note: "Nature painted not as landscape but as relative — older, patient, faintly amused. These works come from long walks taken slowly, from sitting with a single tree until it stopped being scenery. The land holds memory. These paintings are receipts.",
-  },
-  {
-    slug: "cosmic-garden",
-    title: "Cosmic Garden",
-    line: "Night-blooming things beneath a dotted sky.",
-    note: "The Cosmic Garden grows where the astronomical and the botanical refuse to stay separate — flowers with the gravity of suns, seeds arranged like constellations. It is the most joyful ground in the studio: saturated, generous, a little wild, painted with the windows open.",
-  },
-  {
-    slug: "moon-rituals",
-    title: "Moon Rituals",
-    line: "Phases, offerings, and the discipline of soft light.",
-    note: "A devotional series. Each work marks a phase — not just of the moon, but of a life lived in cycles rather than lines. Milk light, ivory circles, the patience of waxing and the mercy of waning. These paintings are quietest in the collection, and they know it.",
+    slug: "inner-landscapes",
+    title: "Inner Landscapes",
+    line: "The invisible architecture of thought.",
+    note: "Maps of places that exist only from the inside. These works chart consciousness the way older painters charted coastlines — dotted pathways, rooms of feeling, weather systems of memory and perception. They are painted intuitively and read intuitively: you do not decode them, you recognise them.",
   },
 ];
 

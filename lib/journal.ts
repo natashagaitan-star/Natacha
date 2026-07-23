@@ -11,59 +11,59 @@ export type Post = {
 
 export const posts: Post[] = [
   {
-    slug: "painting-by-moonlight-literally",
-    title: "Painting by Moonlight, Literally",
+    slug: "the-symbols-that-keep-returning",
+    title: "The Symbols That Keep Returning",
     date: "June 2026",
     iso: "2026-06-14",
-    topic: "Studio",
-    excerpt:
-      "For the Moon Rituals series I turned the studio lights off and let the work be judged by the only critic it was made for.",
-    body: [
-      "There is a long tradition of painters chasing the north light, and a much shorter tradition of painters turning all the lights off entirely. For the final passes on Milk of the Moon, I worked during the full moon with the studio dark and the skylight uncovered. Not for romance — for accuracy. A painting about moonlight that only works under gallery bulbs is a painting that lies.",
-      "What I learned: moonlight is not blue. It is barely a colour at all — it is a permission. Values survive it; chroma mostly doesn't. The ivory column at the centre of the painting was repainted three times because under the moon it kept disappearing into its own background, being too polite about itself.",
-      "I do not recommend this as a working method. I lost a good brush in the dark and drank a glass of water that turned out to be medium. But the painting stopped lying, and that was the assignment.",
-    ],
-  },
-  {
-    slug: "what-i-mean-when-i-say-intuition",
-    title: "What I Mean When I Say Intuition",
-    date: "May 2026",
-    iso: "2026-05-02",
     topic: "Process",
     excerpt:
-      "The least mystical thing in my practice is the part everyone assumes is the most mystical.",
+      "Hands, hearts, houses, suns, pathways. I stopped choosing them years ago — now I just answer the door.",
     body: [
-      "People imagine intuition as lightning — a message from elsewhere, arriving complete. In the studio it is much homelier than that. It is the accumulated pattern-memory of ten thousand hours of looking, surfacing as a feeling of wrongness about a rose madder that is two degrees too cool.",
-      "I trust it the way you trust a very old dog. It does not explain itself, it is occasionally asleep, and it is almost never wrong about strangers. When a composition resists for days and then a voice with no vocabulary says lower the horizon, I have learned to just lower the horizon.",
-      "The mystical part, if you want one, is this: the voice gets clearer the more you obey it. Every time I override it with cleverness, it goes quiet for a week. Every time I follow it, the next painting comes easier. Whatever that feedback loop is — craft, spirit, nervous system — I have stopped needing to name it. I just keep the channel open and the brushes clean.",
+      "Every painter has a vocabulary, whether or not she chose it. Mine announced itself early and has never really changed: hands, hearts, houses, suns and moons, roots, pathways. For a while I worried this was repetition. Then I understood it is closer to a language — the same words, saying new things each time they are arranged.",
+      "The hand came first. It is the oldest mark humans ever made on a wall, and it is still the most honest one. A hand says: I was here, I touched things, I reached for someone. When I pressed my own hands into the paint for Only Human, I was doing what someone did on a cave wall forty thousand years ago, for what I have to assume were the same reasons.",
+      "The houses are always two houses — the one you came from and the one you are building. The hearts are always larger than anatomy allows, because feelings do not respect scale. And the pathways, dotted across dark panels like maps of thought, are there because I have never once known where I was going, and painting is how I walk anyway.",
     ],
   },
   {
-    slug: "a-defense-of-astrology-for-skeptics",
-    title: "A Defence of Astrology, for Skeptics",
-    date: "March 2026",
-    iso: "2026-03-21",
-    topic: "Astrology",
+    slug: "on-painting-family",
+    title: "On Painting Family",
+    date: "April 2026",
+    iso: "2026-04-18",
+    topic: "Studio",
     excerpt:
-      "You do not have to believe the planets arrange your life to understand why I paint them.",
+      "Father and The Pain of My Mother were the two hardest canvases I have ever finished. They were also the two that taught me why I paint.",
     body: [
-      "Here is what a birth chart actually is, stripped of everything contentious: a map of the sky at the moment you arrived, drawn according to rules older than most nations. It says — before anything else — you happened at a particular time, and the universe was doing something specific when you did. As a technology for making a single human life feel located, I know of nothing better.",
-      "When I painted Saturn Return, I was not asserting a mechanism. I was marking a threshold the way people have always marked thresholds — with an image, made carefully, at some cost. The astrology gave me the occasion and the iconography. The painting did the rest.",
-      "So no, I will not argue with your skepticism; some of my favourite collectors share it. The paintings do not require belief. They require only the thing astrology and art both traffic in, which is attention — to cycles, to timing, to the suspicion that your life has a shape and the shape has a sky over it.",
+      "There is a moment before you paint your family when you have to decide whether you are making art or making an accusation. I sat with blank canvases for a long time before Father and The Pain of My Mother, until I understood the difference: an accusation wants to be right, and a painting wants to be true.",
+      "So the paintings hold everything at once, the way real families do. A house glowing in a flowering tree, and a grey world of crosses and money on the same canvas, sharing one root system. Grief and mothering in the same gold halo. I did not resolve those contradictions, because they are not resolvable. I just gave them somewhere to stand where they could finally be looked at.",
+      "People ask if painting these was healing, and the honest answer is: not while it was happening. While it was happening it was just hard. The healing came later, and quietly — the first time I walked past The Pain of My Mother and felt not the pain, but the painting. That distance is small, and it is everything. It is the whole reason I make this work.",
     ],
   },
   {
-    slug: "the-cosmic-garden-is-coming",
-    title: "The Cosmic Garden Is Growing",
+    slug: "notes-from-three-studios",
+    title: "Notes From Three Studios",
+    date: "March 2026",
+    iso: "2026-03-09",
+    topic: "Studio",
+    excerpt:
+      "Laguna Beach taught me colour. Hawaiian Gardens taught me interiority. The work carries both now.",
+    body: [
+      "Almost everything from 2023 and 2024 was painted in Laguna Beach, with ocean light doing half the work. You can see it in those canvases — the blues are actual Pacific blues, the warmth is the actual late-afternoon warmth that comes off the hills. I did not fully understand how much the room paints alongside you until I left it.",
+      "The 2025 works came from Hawaiian Gardens, a different California entirely — inland, ordinary, quiet. Without the ocean to look at, the work turned inward, and A Journey Into His Mind is what it found there: dotted corridors, rooms of thought, an architecture you cannot photograph because it only exists from the inside.",
+      "I am painting somewhere new again now, and I have stopped being precious about it. The studio changes, the light changes, the work absorbs it all and keeps going. Wherever the easel stands, the subject has never really moved: it was always the interior weather, and that travels with me.",
+    ],
+  },
+  {
+    slug: "why-i-leave-the-words-in",
+    title: "Why I Leave the Words In",
     date: "February 2026",
     iso: "2026-02-08",
-    topic: "Collections",
+    topic: "Process",
     excerpt:
-      "Notes toward the next body of work: night-blooming, seed-scattered, and louder than anything I have made before.",
+      "Sometimes a painting needs a word the way a scream needs air. I've stopped painting over them.",
     body: [
-      "Every series I have made until now has been quiet. The Cosmic Garden is not going to be. The first canvases are already refusing the studio's usual manners — vermilion where I planned dusk, seed-centres of raw ochre laid on thick enough to cast shadows. I keep stepping back and laughing, which historically is the best sign there is.",
-      "The premise, if a garden can have one: the botanical and the astronomical are the same subject at different distances. A seed head and a star cluster are one drawing. A flower opening at night and a nebula are one event, patient and sudden at once.",
-      "Two works from the series — The Night Bloom and Sleepwalker's Garden — are finished and in the gallery now. The rest are still becoming. If you want first word when they bloom, the letter below is where I whisper first.",
+      "If you look closely at some of my canvases you will find words in them — a plea, a name for what happened, sometimes just ENOUGH in letters that could not stay quiet. Early on I painted over them, because I thought fine art was supposed to be wordless. I do not believe that anymore.",
+      "The words arrive at the same temperature as the paint. When a feeling is too direct for symbolism, it comes out as language, and sanding it away always felt like asking the painting to be more polite than the life that made it. The tradition agrees with me, from cave walls to Basquiat: when the mark needs to speak, let it.",
+      "So now the words stay, half-buried, the way they are in a person. You find them the way you find anything true about someone — by standing close, and by looking a little longer than is comfortable.",
     ],
   },
 ];

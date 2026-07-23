@@ -37,61 +37,59 @@ export default function AboutPage() {
           </Reveal>
           <Reveal delay={0.1}>
             <h1 className="display mt-6 text-5xl leading-tight md:text-6xl">
-              I paint what the night{" "}
-              <span className="display-italic">leaves behind.</span>
+              I paint what I can't{" "}
+              <span className="display-italic">say out loud.</span>
             </h1>
           </Reveal>
 
           <div className="mt-12 max-w-xl space-y-8 leading-relaxed text-ink/75">
             <Reveal>
               <p className="font-display text-xl text-ink/90">
-                I was raised by women who read skies. My grandmother planted by
-                the moon; my mother could tell you which of her sisters was
-                about to call. Nobody in my family found this remarkable, and
-                so neither did I — until I picked up a brush and discovered
-                that it was the only language those inheritances would answer
-                to.
+                Some feelings are too large for sentences. Family, grief,
+                first love, the question of why any of us are here at all —
+                when I try to speak them they come out smaller than they are.
+                So I stopped trying to say them and started painting them,
+                and I have never once run out of things to say.
               </p>
             </Reveal>
             <Reveal>
               <p>
-                My paintings begin before I am awake. I keep paper by the bed,
-                and in the first minutes of morning — before the dream has
-                finished leaving — I write down whatever it left: a figure
-                holding something luminous, a garden that only opened at
-                night, a river that knew where it was going. The studio work
-                that follows is slow and physical. Layers, sanded back.
-                Glazes thin as breath. A single line of gold laid on in one
-                pass, because some things you do not get to correct.
+                The work began in Laguna Beach, California, in oils, with the
+                Pacific light doing what Pacific light does. The early
+                canvases took on the hardest subjects first — a father's two
+                worlds, a mother's inherited pain, the afternoon a heartbreak
+                finally became just a painting on my wall. I did not plan
+                that order. Honesty has its own sequence, and the brush
+                follows it.
               </p>
             </Reveal>
             <Reveal>
               <p>
-                Astrology moves through the work the way weather moves through
-                a landscape painter's — not as doctrine but as calendar,
-                occasion, and iconography. I paint Saturn returns and first
-                quarters the way other painters have always painted feast days
-                and harvests: because a life needs its thresholds marked, and
-                marking them beautifully is one of the oldest jobs there is.
+                I paint intuitively, and I leave the evidence in. Hands
+                pressed straight into the paint. Words that surface when a
+                feeling is too direct for symbolism. Homes, hearts, suns,
+                pathways — the same symbols returning like a language,
+                because that is what they are. If a mark arrives with the
+                right temperature, it stays, whether or not it is polite.
               </p>
             </Reveal>
             <Reveal>
               <p>
-                The feminine in these paintings is not a subject I chose. It
-                is the ground the work grows from — the intuition my
-                grandmothers trusted without needing it explained, the
-                strength of a figure who holds the moon without straining. If
-                the women in my paintings look like they know something, it is
-                because they do, and because I am still learning it from them.
+                The feminine in this work is not a subject I chose; it is the
+                ground the work grows from. Intuition trusted without
+                explanation. The strength it takes to look directly at what a
+                family hands down and decide, in paint, what to keep and what
+                to release. If these canvases look like they know something,
+                it is because they were made in the moments I finally did.
               </p>
             </Reveal>
             <Reveal>
               <p>
-                Every canvas leaves this studio with a story, a signature, and
-                a little of whatever the night gave me that season. My hope is
-                simple: that one of them stops you the way a true dream does —
-                and that living with it feels like being told, gently and
-                daily, something you already suspected about yourself.
+                Every painting leaves the studio with a story, a signature,
+                and a little of the season that made it. My hope is simple:
+                that one of them stops you mid-step — and that living with it
+                feels like being told, gently and daily, something you
+                already suspected about yourself.
               </p>
             </Reveal>
           </div>

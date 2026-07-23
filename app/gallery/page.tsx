@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { ArtworkCard } from "@/components/ArtworkCard";
 import { Reveal, DrawnLine } from "@/components/Reveal";
-import { artworks } from "@/lib/artworks";
+import { artworks, countWord } from "@/lib/artworks";
 
 export const metadata: Metadata = {
   title: "Gallery",
@@ -25,8 +25,9 @@ export default function GalleryPage() {
           </Reveal>
           <Reveal delay={0.24}>
             <p className="mt-8 max-w-md leading-relaxed text-ivory/60">
-              Twelve original works hang here. Titles arrive when you pause on
-              a painting — the way a label waits beside a frame.
+              {countWord(artworks.length)} original works hang here. Titles
+              arrive when you pause on a painting — the way a label waits
+              beside a frame.
             </p>
           </Reveal>
         </div>

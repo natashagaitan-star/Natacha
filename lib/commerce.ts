@@ -15,8 +15,9 @@ import { site } from "./site";
 
 export function acquireHref(a: Artwork): string {
   const subject = encodeURIComponent(`Acquiring “${a.title}”`);
+  const priceNote = a.price ? `, ${formatPrice(a.price)}` : "";
   const body = encodeURIComponent(
-    `Hello Natasha,\n\nI would love to acquire “${a.title}” (${a.dimensions}, ${formatPrice(a.price)}).\n\nMy shipping city/country: \n\nWarmly,`,
+    `Hello Natasha,\n\nI would love to acquire “${a.title}” (${a.dimensions}${priceNote}).\n\nMy shipping city/country: \n\nWarmly,`,
   );
   return `mailto:${site.email}?subject=${subject}&body=${body}`;
 }

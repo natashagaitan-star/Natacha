@@ -51,10 +51,12 @@ export default async function ArtworkPage({
     dateCreated: String(a.year),
     width: a.dimensions.split("×")[0].trim(),
     height: a.dimensions.split("×")[1]?.trim(),
+    ...(a.place
+      ? { locationCreated: { "@type": "Place", name: a.place } }
+      : {}),
     offers: {
       "@type": "Offer",
-      price: a.price,
-      priceCurrency: "USD",
+      ...(a.price ? { price: a.price, priceCurrency: "USD" } : {}),
       availability:
         a.status === "available"
           ? "https://schema.org/InStock"
@@ -104,14 +106,17 @@ export default async function ArtworkPage({
               {(
                 [
                   ["Year", String(a.year)],
+                  ...(a.place ? [["Created", a.place]] : []),
                   ["Medium", a.medium],
                   ["Size", `${a.dimensions} · ${a.dimensionsCm}`],
                   ["Edition", "Original — one of one"],
                   [
                     "Status",
-                    a.status === "available" ? "Available" : "In a private collection",
+                    a.status === "available"
+                      ? "Available for acquisition"
+                      : "In a private collection",
                   ],
-                ] as const
+                ] as [string, string][]
               ).map(([k, v]) => (
                 <div key={k} className="flex justify-between gap-6">
                   <dt className="label text-ink/45">{k}</dt>
@@ -125,7 +130,9 @@ export default async function ArtworkPage({
             <div className="mt-10 border-t border-ink/12 pt-8">
               {a.status === "available" ? (
                 <>
-                  <p className="display text-3xl">{formatPrice(a.price)}</p>
+                  <p className="display text-3xl">
+                    {a.price ? formatPrice(a.price) : "Price on request"}
+                  </p>
                   <a
                     href={acquireHref(a)}
                     className="label group mt-7 inline-flex items-center gap-4 border border-ink px-9 py-5 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] hover:bg-ink hover:text-ivory"
