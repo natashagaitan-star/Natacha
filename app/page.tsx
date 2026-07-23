@@ -8,9 +8,7 @@ import { posts } from "@/lib/journal";
 import { book, site } from "@/lib/site";
 
 export default function Home() {
-  const hero = artworks.find(
-    (a) => a.slug === "youre-just-a-painting-on-my-wall-now",
-  )!;
+  const hero = artworks.find((a) => a.slug === "a-journey-into-his-mind")!;
   const aboutWork = artworks.find((a) => a.slug === "why-are-you-here")!;
   const latest = posts.slice(0, 2);
 
