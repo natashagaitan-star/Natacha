@@ -117,8 +117,8 @@ export const artworks: Artwork[] = [
     dimensionsCm: "30.5 × 22.9 cm",
     status: "available",
     image: "/art/only-human.jpg",
-    ratio: 1600 / 1213,
-    alt: "Pale handprints pressed into a midnight-violet field above, and a single deep-rose handprint pressed into a field of warm amber below.",
+    ratio: 1600 / 1361,
+    alt: "An open hand rising against washed violet, each finger painted into something else — a bird, a flame, a river, a tree growing from the fingertip.",
     line: "A hand raised to say: I was here.",
     featured: true,
     story: [
@@ -138,8 +138,8 @@ export const artworks: Artwork[] = [
     dimensionsCm: "40.6 × 30.5 cm",
     status: "available",
     image: "/art/why-are-you-here.jpg",
-    ratio: 1600 / 1361,
-    alt: "An open hand rising against washed violet, each finger becoming something else — a bird, a flame, a river, a tree growing from the fingertip.",
+    ratio: 1600 / 1213,
+    alt: "Pale handprints pressed into a midnight-violet field above, and a single deep-rose handprint pressed into a field of warm amber below.",
     line: "One of the oldest questions, asked in paint.",
     story: [
       "Why Are You Here explores one of humanity's oldest questions: existence, purpose, and the search for meaning.",
