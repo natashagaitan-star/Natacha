@@ -99,9 +99,10 @@ export const artworks: Artwork[] = [
     dimensionsCm: "50.8 × 40.6 cm",
     status: "available",
     image: "/art/its-a-boys-world.jpg",
-    ratio: 1600 / 1227,
-    alt: "A dense, playful field of games and creatures — a green face, tic-tac-toe marks, birds, a red heart, spirals and suns — crowded edge to edge in saturated colour.",
+    ratio: 1249 / 1600,
+    alt: "A boy with an open head holding a red heart and a dollar sign inside it, standing before an ocean under a golden sun — parents in a mirror, a parrot caged with a heart, a small dark Earth in his hand.",
     line: "Some things are loved. Others are possessed.",
+    featured: true,
     story: [
       "Some things are loved. Others are possessed. The distance between the two can shape a lifetime.",
     ],
@@ -204,26 +205,25 @@ export const artworks: Artwork[] = [
       "Centred around a luminous heart surrounded by movement, geometric forms, and abstract symbolism, the painting examines the stories, fears, and emotional structures we build around something that may have always been simple.",
     ],
   },
-  // ——— Photograph pending — uncomment when the photo of "Unbound" arrives ———
-  // {
-  //   slug: "unbound",
-  //   title: "Unbound",
-  //   collection: "inner-landscapes",
-  //   year: "2025",
-  //   place: "Laguna Beach, California",
-  //   medium: "Acrylic on canvas",
-  //   dimensions: "20 × 16 in",
-  //   dimensionsCm: "50.8 × 40.6 cm",
-  //   status: "available",
-  //   image: "/art/unbound.jpg",
-  //   ratio: 4 / 3,
-  //   alt: "Unbound, an acrylic painting by Natasha Valentina.",
-  //   line: "Beyond the worlds we are given.",
-  //   story: [
-  //     "Unbound is an exploration of liberation, transformation, and the invisible structures we move through.",
-  //     "A reflection on breaking inherited patterns and discovering what exists beyond the worlds we are given, the work speaks to personal evolution, freedom, and the courage to create a new path.",
-  //   ],
-  // },
+  {
+    slug: "unbound",
+    title: "Unbound",
+    collection: "inner-landscapes",
+    year: "2025",
+    place: "Laguna Beach, California",
+    medium: "Acrylic on canvas",
+    dimensions: "20 × 16 in",
+    dimensionsCm: "50.8 × 40.6 cm",
+    status: "available",
+    image: "/art/unbound.jpg",
+    ratio: 1600 / 1227,
+    alt: "A dense, unruly field of saturated worlds — a green face, tic-tac-toe marks, birds in flight, a red heart, a silver spiral, small figures and structures crowding every edge of the canvas.",
+    line: "Beyond the worlds we are given.",
+    story: [
+      "Unbound is an exploration of liberation, transformation, and the invisible structures we move through.",
+      "A reflection on breaking inherited patterns and discovering what exists beyond the worlds we are given, the work speaks to personal evolution, freedom, and the courage to create a new path.",
+    ],
+  },
 ];
 
 export const artworkBySlug = (slug: string) =>
