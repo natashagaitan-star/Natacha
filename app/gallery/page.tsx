@@ -6,7 +6,7 @@ import { artworks, countWord } from "@/lib/artworks";
 export const metadata: Metadata = {
   title: "Gallery",
   description:
-    "The full gallery of original paintings by Natasha Valentina — divine feminine, celestial and dream-state works, presented museum-style.",
+    "The full gallery of original paintings by Natasha Valentina — raw, symbolic works of family, love, memory, and presence, presented museum-style.",
 };
 
 export default function GalleryPage() {

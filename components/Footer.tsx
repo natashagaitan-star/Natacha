@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { footerNav, nav, site } from "@/lib/site";
+import { book, footerNav, nav, site } from "@/lib/site";
 import { NewsletterForm } from "./NewsletterForm";
 
 export function Footer() {
@@ -65,6 +65,11 @@ export function Footer() {
                 </a>
               </li>
               <li>
+                <a href={book.url} rel="noopener noreferrer" target="_blank" className="link-draw text-sm text-ivory/75 hover:text-ivory">
+                  The book — {book.title}
+                </a>
+              </li>
+              <li>
                 <a href={`mailto:${site.email}`} className="link-draw text-sm text-ivory/75 hover:text-ivory">
                   {site.email}
                 </a>
@@ -79,7 +84,7 @@ export function Footer() {
             and protected.
           </p>
           <p className="display-italic text-sm text-ivory/40">
-            Painted by hand, under actual stars.
+            Painted by hand, one feeling at a time.
           </p>
         </div>
       </div>

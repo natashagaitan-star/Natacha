@@ -2,33 +2,41 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Reveal, DrawnLine } from "@/components/Reveal";
+import { artworkBySlug } from "@/lib/artworks";
+import { book } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "About the Artist",
   description:
-    "Natasha Valentina paints the divine feminine, the night sky, and the dream between them. Her story, her process, and the symbolism behind the work.",
+    "Natasha Valentina paints the inner world — family, love, memory, and the marks we leave behind. Her story, her process, and her book, What You Don't Hear.",
 };
 
 export default function AboutPage() {
+  const portraitWork = artworkBySlug("only-human")!;
   return (
     <div className="mx-auto max-w-[1400px] px-6 pt-40 pb-28 md:px-10 md:pt-52 md:pb-40">
       <div className="grid gap-14 lg:grid-cols-[2fr_3fr] lg:gap-24">
         <Reveal className="lg:sticky lg:top-28 lg:self-start">
-          <div className="frame">
-            <div className="relative w-full" style={{ aspectRatio: 9 / 11 }}>
-              <Image
-                src="/portrait.svg"
-                alt="Natasha Valentina at her easel in the studio at dusk, brush raised toward a canvas of indigo and ochre"
-                fill
-                priority
-                sizes="(min-width: 1024px) 38vw, 92vw"
-                className="object-cover"
-              />
+          <Link href={`/art/${portraitWork.slug}`} className="group block">
+            <div className="frame overflow-hidden">
+              <div
+                className="relative w-full overflow-hidden"
+                style={{ aspectRatio: portraitWork.ratio }}
+              >
+                <Image
+                  src={portraitWork.image}
+                  alt={portraitWork.alt}
+                  fill
+                  priority
+                  sizes="(min-width: 1024px) 38vw, 92vw"
+                  className="object-cover transition-transform duration-[1400ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.02]"
+                />
+              </div>
             </div>
-          </div>
-          <p className="label mt-5 text-center text-ink/40">
-            The studio, blue hour
-          </p>
+            <p className="label mt-5 text-center text-ink/40 transition-colors duration-500 group-hover:text-ink/70">
+              {portraitWork.title}, {portraitWork.year} — her hands, in the paint
+            </p>
+          </Link>
         </Reveal>
 
         <div>
@@ -109,6 +117,63 @@ export default function AboutPage() {
               <Link href="/contact" className="label link-draw pb-1">
                 Write to Natasha
               </Link>
+            </div>
+          </Reveal>
+
+          {/* ————— The book ————— */}
+          <Reveal>
+            <div className="mt-20 border-t border-ink/12 pt-14">
+              <p className="label text-clay">The book</p>
+              <div className="mt-8 flex flex-col gap-10 sm:flex-row sm:items-start">
+                <a
+                  href={book.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group block w-44 shrink-0"
+                  aria-label={`${book.title} on Amazon`}
+                >
+                  <div className="frame overflow-hidden !p-3">
+                    <div
+                      className="relative w-full overflow-hidden"
+                      style={{ aspectRatio: book.ratio }}
+                    >
+                      <Image
+                        src={book.cover}
+                        alt={`Cover of ${book.title} by ${book.author} — white type over a dark ocean wave`}
+                        fill
+                        sizes="176px"
+                        className="object-cover transition-transform duration-[1400ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.03]"
+                      />
+                    </div>
+                  </div>
+                </a>
+                <div>
+                  <h2 className="display text-3xl md:text-4xl">
+                    What You Don't{" "}
+                    <span className="display-italic">Hear</span>
+                  </h2>
+                  <p className="display-italic mt-3 text-lg text-clay">
+                    {book.line}
+                  </p>
+                  <p className="mt-5 max-w-sm text-sm leading-relaxed text-ink/65">
+                    Before the canvases, and beneath them, there have always
+                    been words. Natasha's book gathers what goes unsaid — the
+                    inner weather her paintings speak in colour, written down.
+                    Available on Amazon.
+                  </p>
+                  <a
+                    href={book.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="label group mt-7 inline-flex items-center gap-4 border border-ink px-8 py-4 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] hover:bg-ink hover:text-ivory"
+                  >
+                    Read on Amazon
+                    <span aria-hidden className="transition-transform duration-700 group-hover:translate-x-1.5">
+                      →
+                    </span>
+                  </a>
+                </div>
+              </div>
             </div>
           </Reveal>
         </div>

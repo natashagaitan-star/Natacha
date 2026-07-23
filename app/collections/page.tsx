@@ -8,7 +8,7 @@ import { byCollection } from "@/lib/artworks";
 export const metadata: Metadata = {
   title: "Collections",
   description:
-    "The six bodies of work by Natasha Valentina — Celestial, Divine Feminine, Dream State, Sacred Nature, Cosmic Garden, and Moon Rituals.",
+    "The four bodies of work by Natasha Valentina — Family & Inheritance, Love & Loss, The Marks We Leave, and Inner Landscapes.",
 };
 
 export default function CollectionsPage() {

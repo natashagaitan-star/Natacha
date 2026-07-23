@@ -25,8 +25,8 @@ Port 3106 (3000 is occupied on this machine; 3105 is atelier).
 
 ## Before real launch
 
-1. **Real artwork photos** — replace the placeholder SVGs in `public/art/` and update `image` + `ratio` in `lib/artworks.ts`. Same for `public/portrait.svg`.
-2. **Domain + email** — `lib/site.ts` currently uses `natashavalentina.art` placeholders.
+1. **"Unbound" photo** — entry is staged (commented out) in `lib/artworks.ts`; add `public/art/unbound.jpg`, set `ratio`, and uncomment. **Artist portrait** — About/home currently show her paintings (Only Human / Why Are You Here) in place of a portrait; swap in a real studio photo when one exists.
+2. **Domain + email** — `lib/site.ts` currently uses `natashavalentina.art` placeholders. The book (What You Don't Hear) links to Amazon via `book` in `lib/site.ts`.
 3. **Newsletter** — `components/NewsletterForm.tsx` shows a client-side confirmation only; wire Resend/Buttondown/Shopify Email.
 4. **Contact** — `components/ContactForm.tsx` composes a mailto; swap for an API route + Resend if server delivery is wanted.
 5. **Checkout** — purchases are concierge-by-email (normal for originals at this price point). To add Shopify: create products with handles = artwork slugs and point `lib/commerce.ts` at checkout URLs; no UI changes needed.

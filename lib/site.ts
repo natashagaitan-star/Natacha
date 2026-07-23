@@ -13,6 +13,16 @@ export const site = {
   founded: 2023,
 };
 
+export const book = {
+  title: "What You Don't Hear",
+  author: "Natasha Valentina",
+  url: "https://www.amazon.com/dp/B0DMVQ1PYC",
+  cover: "/book-what-you-dont-hear.jpg",
+  /** cover width / height */
+  ratio: 311 / 466,
+  line: "The same territory as the paintings — this time in words.",
+};
+
 export const nav = [
   { label: "Gallery", href: "/gallery" },
   { label: "Originals", href: "/originals" },

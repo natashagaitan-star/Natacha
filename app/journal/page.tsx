@@ -6,7 +6,7 @@ import { posts } from "@/lib/journal";
 export const metadata: Metadata = {
   title: "Journal",
   description:
-    "Studio notes from Natasha Valentina — process, astrology, upcoming collections, and life between paintings.",
+    "Studio notes from Natasha Valentina — process, symbolism, upcoming collections, and life between paintings.",
 };
 
 export default function JournalPage() {

@@ -5,10 +5,11 @@ import { Reveal, DrawnLine } from "@/components/Reveal";
 import { featured, artworks } from "@/lib/artworks";
 import { collections } from "@/lib/collections";
 import { posts } from "@/lib/journal";
-import { site } from "@/lib/site";
+import { book, site } from "@/lib/site";
 
 export default function Home() {
   const hero = artworks.find((a) => a.slug === "a-journey-into-his-mind")!;
+  const aboutWork = artworks.find((a) => a.slug === "why-are-you-here")!;
   const latest = posts.slice(0, 2);
 
   return (
@@ -149,17 +150,25 @@ export default function Home() {
       <section className="mx-auto max-w-[1400px] px-6 py-28 md:px-10 md:py-44">
         <div className="grid items-center gap-14 md:grid-cols-2 md:gap-24">
           <Reveal>
-            <div className="frame">
-              <div className="relative w-full" style={{ aspectRatio: 9 / 11 }}>
-                <Image
-                  src="/portrait.svg"
-                  alt="Natasha Valentina painting at her easel in the studio at dusk"
-                  fill
-                  sizes="(min-width: 768px) 45vw, 92vw"
-                  className="object-cover"
-                />
+            <Link href={`/art/${aboutWork.slug}`} className="group block">
+              <div className="frame overflow-hidden">
+                <div
+                  className="relative w-full overflow-hidden"
+                  style={{ aspectRatio: aboutWork.ratio }}
+                >
+                  <Image
+                    src={aboutWork.image}
+                    alt={aboutWork.alt}
+                    fill
+                    sizes="(min-width: 768px) 45vw, 92vw"
+                    className="object-cover transition-transform duration-[1600ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.02]"
+                  />
+                </div>
               </div>
-            </div>
+              <p className="label mt-4 text-center text-ink/40 transition-colors duration-500 group-hover:text-ink/70">
+                {aboutWork.title}, {aboutWork.year}
+              </p>
+            </Link>
           </Reveal>
           <div>
             <Reveal>
@@ -185,6 +194,65 @@ export default function Home() {
                 Meet Natasha
               </Link>
             </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* ————— The book ————— */}
+      <section className="bg-indigo text-ivory">
+        <div className="mx-auto max-w-[1400px] px-6 py-24 md:px-10 md:py-32">
+          <div className="flex flex-col items-start gap-12 md:flex-row md:items-center md:gap-20">
+            <Reveal className="w-40 shrink-0 md:w-48">
+              <a
+                href={book.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${book.title} on Amazon`}
+                className="group block"
+              >
+                <div className="frame overflow-hidden !p-3">
+                  <div
+                    className="relative w-full overflow-hidden"
+                    style={{ aspectRatio: book.ratio }}
+                  >
+                    <Image
+                      src={book.cover}
+                      alt={`Cover of ${book.title} by Natasha Valentina — white type over a dark ocean wave`}
+                      fill
+                      sizes="192px"
+                      className="object-cover transition-transform duration-[1400ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.03]"
+                    />
+                  </div>
+                </div>
+              </a>
+            </Reveal>
+            <div>
+              <Reveal>
+                <p className="label text-gold">The book</p>
+                <h2 className="display mt-5 text-4xl md:text-5xl">
+                  What You Don't <span className="display-italic">Hear</span>
+                </h2>
+              </Reveal>
+              <Reveal delay={0.1}>
+                <p className="mt-5 max-w-md leading-relaxed text-ivory/65">
+                  {book.line} Natasha's book gathers the unsaid — available now
+                  on Amazon.
+                </p>
+              </Reveal>
+              <Reveal delay={0.2}>
+                <a
+                  href={book.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="label group mt-8 inline-flex items-center gap-4 border border-ivory/40 px-8 py-4 text-ivory transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] hover:border-ivory hover:bg-ivory hover:text-indigo"
+                >
+                  Read on Amazon
+                  <span aria-hidden className="transition-transform duration-700 group-hover:translate-x-1.5">
+                    →
+                  </span>
+                </a>
+              </Reveal>
+            </div>
           </div>
         </div>
       </section>
