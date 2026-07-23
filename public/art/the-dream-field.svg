@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 840" role="img" aria-label="The Dream Field">
+  <defs>
+    <filter id="paint" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.013" numOctaves="3" seed="51" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="13"/>
+    </filter>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="17"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.07"/></feComponentTransfer>
+      <feComposite operator="over" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+
+  <!-- lavender-cream mist -->
+  <rect width="1080" height="840" fill="#e9e2dc"/>
+  <g filter="url(#paint)">
+    <path d="M-40 -30 L1120 -30 L1120 260 Q640 340 300 270 T-40 290 Z" fill="#d9d2e6" opacity="0.9"/>
+    <path d="M-40 300 Q400 240 760 320 T1120 300 L1120 560 Q640 620 260 560 T-40 580 Z" fill="#cbc2de" opacity="0.75"/>
+    <path d="M-40 560 Q420 500 800 580 T1120 560 L1120 880 L-40 880 Z" fill="#e2d8ce" opacity="0.9"/>
+    <path d="M200 400 q300 -60 560 10 q-280 70 -560 30 z" fill="#f3ead6" opacity="0.6"/>
+  </g>
+
+  <!-- floating blooms, untethered -->
+  <g filter="url(#paint)">
+    <!-- large rose bloom -->
+    <g transform="translate(310 330)">
+      <g fill="#c07a68">
+        <ellipse rx="64" ry="86" transform="rotate(-8)"/>
+        <ellipse rx="52" ry="72" transform="rotate(24) translate(20 6)" opacity="0.85"/>
+      </g>
+      <ellipse rx="38" ry="52" fill="#d59a86" transform="rotate(-4)"/>
+      <circle r="17" fill="#8e4a38"/>
+      <circle r="5" cx="2" cy="1" fill="#2e1c16"/>
+    </g>
+    <!-- terracotta poppy -->
+    <g transform="translate(700 250)">
+      <g fill="#a24e36">
+        <path d="M0 0 C-56 -28 -76 -84 -56 -132 C-8 -116 24 -64 20 -8 Z"/>
+        <path d="M0 0 C40 -48 96 -60 140 -40 C120 8 64 32 8 20 Z"/>
+        <path d="M0 0 C48 32 60 88 40 132 C-8 112 -32 60 -22 6 Z"/>
+        <path d="M0 0 C-44 40 -100 44 -140 20 C-112 -24 -56 -40 -6 -22 Z"/>
+      </g>
+      <circle r="20" fill="#c0913f"/>
+      <circle r="5.4" cx="-1" cy="2" fill="#2e1c16"/>
+    </g>
+    <!-- small drifting buds -->
+    <g transform="translate(880 520)">
+      <ellipse rx="34" ry="46" fill="#c69b92" transform="rotate(18)"/>
+      <circle r="11" fill="#8e4a38"/><circle r="3.4" cx="1" cy="1" fill="#2e1c16"/>
+    </g>
+    <g transform="translate(180 620)">
+      <ellipse rx="40" ry="54" fill="#b0755e" transform="rotate(-14)"/>
+      <ellipse rx="26" ry="36" fill="#d59a86" transform="rotate(-10)"/>
+      <circle r="9" fill="#2e1c16" opacity="0.85"/>
+    </g>
+    <g transform="translate(540 590)">
+      <g fill="#c07a68" opacity="0.95">
+        <ellipse rx="30" ry="44" transform="rotate(10)"/>
+        <ellipse rx="24" ry="34" transform="rotate(52)" opacity="0.8"/>
+      </g>
+      <circle r="10" fill="#c0913f"/><circle r="3" cx="1" fill="#2e1c16"/>
+    </g>
+    <g transform="translate(520 130)">
+      <ellipse rx="22" ry="30" fill="#a79fc4" transform="rotate(-20)"/>
+      <circle r="7" fill="#5d5480"/>
+    </g>
+    <!-- seeds on the air -->
+    <circle cx="440" cy="440" r="7" fill="#c0913f" opacity="0.85"/>
+    <circle cx="620" cy="420" r="5.4" fill="#a97466" opacity="0.8"/>
+    <circle cx="800" cy="380" r="6" fill="#c0913f" opacity="0.75"/>
+    <circle cx="240" cy="480" r="5" fill="#8e6aa0" opacity="0.6"/>
+    <circle cx="940" cy="660" r="6.4" fill="#a97466" opacity="0.7"/>
+    <circle cx="90" cy="360" r="5.6" fill="#c0913f" opacity="0.7"/>
+    <circle cx="680" cy="700" r="5" fill="#8e6aa0" opacity="0.55"/>
+  </g>
+
+  <rect width="1080" height="840" filter="url(#grain)" opacity="0.5" fill="#000" fill-opacity="0"/>
+</svg>

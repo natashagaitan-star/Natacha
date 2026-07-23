@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 1200" role="img" aria-label="Milk of the Moon">
+  <defs>
+    <filter id="paint" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="3" seed="111" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="13"/>
+    </filter>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="41"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.08"/></feComponentTransfer>
+      <feComposite operator="over" in2="SourceGraphic"/>
+    </filter>
+    <linearGradient id="pour" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f3ead6" stop-opacity="0.95"/>
+      <stop offset="70%" stop-color="#e9ddc0" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#e9ddc0" stop-opacity="0.25"/>
+    </linearGradient>
+  </defs>
+
+  <!-- night -->
+  <rect width="960" height="1200" fill="#12172e"/>
+  <g filter="url(#paint)">
+    <path d="M-40 -30 L1000 -30 L1000 280 Q560 350 220 290 T-40 310 Z" fill="#181e3c" opacity="0.9"/>
+    <path d="M-40 400 q320 -70 600 0 q-280 80 -600 40 z" fill="#232a55" opacity="0.5"/>
+    <!-- dark water -->
+    <path d="M-40 860 Q300 820 560 860 T1000 850 L1000 1240 L-40 1240 Z" fill="#0c1022"/>
+    <path d="M-40 900 q280 -24 560 8 q220 24 440 -8 l0 340 l-1000 0 z" fill="#090c1a" opacity="0.9"/>
+  </g>
+
+  <!-- the immense moon -->
+  <g filter="url(#paint)">
+    <circle cx="480" cy="360" r="230" fill="#f3ead6"/>
+    <circle cx="480" cy="360" r="230" fill="none" stroke="#d8c89a" stroke-width="10" opacity="0.6"/>
+    <path d="M338 268 q90 -76 236 -62" stroke="#fdf8ea" stroke-width="16" fill="none" stroke-linecap="round" opacity="0.75"/>
+    <path d="M602 250 q52 62 58 148" stroke="#d8c89a" stroke-width="13" fill="none" stroke-linecap="round" opacity="0.5"/>
+    <circle cx="392" cy="352" r="21" fill="#d8c89a" opacity="0.42"/>
+    <circle cx="432" cy="416" r="12" fill="#d8c89a" opacity="0.38"/>
+    <circle cx="548" cy="452" r="15" fill="#d8c89a" opacity="0.4"/>
+  </g>
+
+  <!-- the pour: a soft column of milk light -->
+  <g filter="url(#paint)">
+    <path d="M400 560 C404 660 396 760 388 872 L572 872 C564 760 556 660 560 560 Q480 596 400 560 Z" fill="url(#pour)"/>
+    <!-- where it meets the water -->
+    <ellipse cx="480" cy="884" rx="150" ry="20" fill="#e9ddc0" opacity="0.8"/>
+    <ellipse cx="480" cy="906" rx="230" ry="24" fill="none" stroke="#d8c89a" stroke-width="6" opacity="0.5"/>
+    <ellipse cx="480" cy="936" rx="320" ry="30" fill="none" stroke="#8d84b8" stroke-width="5" opacity="0.35"/>
+    <!-- the light spreading under the surface -->
+    <path d="M300 960 q180 -30 360 0 q-40 60 -180 60 q-140 0 -180 -60 z" fill="#3d3a6b" opacity="0.5"/>
+  </g>
+
+  <!-- attendants -->
+  <g fill="#efe7d2">
+    <circle cx="130" cy="150" r="3.2" opacity="0.75"/><circle cx="850" cy="120" r="3" opacity="0.7"/>
+    <circle cx="890" cy="420" r="2.6" opacity="0.5"/><circle cx="80" cy="520" r="2.8" opacity="0.55"/>
+    <circle cx="170" cy="760" r="2.6" opacity="0.5"/><circle cx="840" cy="720" r="2.8" opacity="0.55"/>
+    <circle cx="900" cy="1060" r="2.4" opacity="0.4"/><circle cx="90" cy="1100" r="2.6" opacity="0.45"/>
+  </g>
+
+  <rect width="960" height="1200" filter="url(#grain)" opacity="0.5" fill="#000" fill-opacity="0"/>
+</svg>

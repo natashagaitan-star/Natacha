@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200" role="img" aria-label="The Listening Tree">
+  <defs>
+    <filter id="paint" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.013" numOctaves="3" seed="101" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="14"/>
+    </filter>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="37"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.08"/></feComponentTransfer>
+      <feComposite operator="over" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+
+  <!-- dusk indigo -->
+  <rect width="900" height="1200" fill="#2b3157"/>
+  <g filter="url(#paint)">
+    <path d="M-40 -30 L940 -30 L940 260 Q520 330 200 270 T-40 290 Z" fill="#3a4170" opacity="0.85"/>
+    <path d="M-40 300 Q360 240 700 320 T940 300 L940 620 Q520 680 180 620 T-40 640 Z" fill="#272c4b" opacity="0.9"/>
+    <!-- ground: the hill behind the studio -->
+    <path d="M-40 920 Q240 830 520 890 Q760 940 940 900 L940 1240 L-40 1240 Z" fill="#1b2036"/>
+    <path d="M-40 1000 Q300 940 620 990 T940 990 L940 1240 L-40 1240 Z" fill="#141828"/>
+  </g>
+
+  <!-- the tree -->
+  <g filter="url(#paint)">
+    <!-- trunk, patient -->
+    <path d="M430 960 C438 840 428 760 420 680 C414 620 430 570 450 540 C470 570 486 620 480 680 C472 760 466 840 478 960 Q454 976 430 960 Z" fill="#2a2027"/>
+    <path d="M448 700 q-60 -40 -110 -110 M456 640 q60 -50 104 -120 M450 760 q-80 -20 -150 -90 M458 780 q90 -24 150 -100" stroke="#2a2027" stroke-width="22" fill="none" stroke-linecap="round"/>
+    <!-- wide crown -->
+    <path d="M450 200
+             C300 200 180 280 150 400
+             C120 520 200 620 330 650
+             C280 600 300 560 350 570
+             C320 500 380 460 440 490
+             C420 420 500 400 550 440
+             C560 380 660 380 680 450
+             C760 430 800 500 750 560
+             C820 560 830 620 780 650
+             C700 700 560 700 450 690
+             C560 710 700 700 760 660
+             C640 700 380 710 300 660
+             C180 620 100 520 130 400
+             C160 280 300 200 450 200 Z"
+          fill="#233a48" opacity="0"/>
+    <ellipse cx="450" cy="430" rx="330" ry="240" fill="#25404f"/>
+    <ellipse cx="290" cy="360" rx="150" ry="110" fill="#2c4c58" opacity="0.9"/>
+    <ellipse cx="600" cy="350" rx="160" ry="115" fill="#1e3542" opacity="0.9"/>
+    <ellipse cx="450" cy="530" rx="240" ry="130" fill="#1b303c" opacity="0.9"/>
+    <!-- leaf strokes -->
+    <g stroke="#3c6470" stroke-width="12" stroke-linecap="round" fill="none" opacity="0.75">
+      <path d="M220 330 q70 -50 150 -40"/>
+      <path d="M480 280 q80 -40 160 -20"/>
+      <path d="M300 520 q80 -40 170 -30"/>
+      <path d="M560 500 q70 -44 150 -34"/>
+    </g>
+    <!-- six small moons, one per year of acquaintance -->
+    <g>
+      <circle cx="260" cy="300" r="26" fill="#f3ead6"/>
+      <circle cx="450" cy="250" r="22" fill="#efe3c2"/>
+      <circle cx="640" cy="320" r="27" fill="#f3ead6"/>
+      <circle cx="330" cy="450" r="24" fill="#efe3c2"/>
+      <circle cx="560" cy="430" r="21" fill="#f3ead6"/>
+      <circle cx="450" cy="580" r="25" fill="#efe3c2"/>
+    </g>
+    <!-- ground moss -->
+    <path d="M330 950 q120 -40 250 0" stroke="#2c4a37" stroke-width="16" fill="none" stroke-linecap="round" opacity="0.7"/>
+  </g>
+
+  <!-- listening sky -->
+  <g fill="#efe7d2">
+    <circle cx="130" cy="120" r="3" opacity="0.7"/><circle cx="760" cy="100" r="3.2" opacity="0.75"/>
+    <circle cx="840" cy="220" r="2.6" opacity="0.55"/><circle cx="90" cy="240" r="2.6" opacity="0.55"/>
+    <circle cx="450" cy="90" r="2.8" opacity="0.65"/><circle cx="640" cy="150" r="2.4" opacity="0.5"/>
+    <circle cx="200" cy="1100" r="2.6" opacity="0.4"/><circle cx="720" cy="1120" r="2.8" opacity="0.45"/>
+  </g>
+
+  <rect width="900" height="1200" filter="url(#grain)" opacity="0.5" fill="#000" fill-opacity="0"/>
+</svg>

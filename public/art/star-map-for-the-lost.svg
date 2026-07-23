@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Star Map for the Lost">
+  <defs>
+    <filter id="paint" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="3" seed="81" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="10"/>
+    </filter>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="29"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.08"/></feComponentTransfer>
+      <feComposite operator="over" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="900" fill="#0e1226"/>
+  <g filter="url(#paint)">
+    <path d="M-40 -30 L1240 -30 L1240 260 Q640 330 280 270 T-40 290 Z" fill="#151a33" opacity="0.9"/>
+    <path d="M-40 600 Q460 530 840 610 T1240 590 L1240 940 L-40 940 Z" fill="#0a0d1c" opacity="0.95"/>
+    <path d="M200 340 q340 -70 620 0 q-300 90 -620 40 z" fill="#232a55" opacity="0.45"/>
+    <path d="M600 200 q260 -40 460 20 q-220 50 -460 20 z" fill="#3d3a6b" opacity="0.3"/>
+  </g>
+
+  <!-- invented constellations, gold thread -->
+  <g stroke="#c9a04e" stroke-width="2" opacity="0.85" filter="url(#paint)">
+    <path d="M170 210 L260 160 L360 200 L410 300 L330 360" fill="none"/>
+    <path d="M540 140 L640 180 L700 120 L800 160" fill="none"/>
+    <path d="M900 260 L980 220 L1060 280 L1020 380 L920 400 L900 260" fill="none"/>
+    <path d="M240 520 L330 480 L420 540 L400 640 L300 660" fill="none"/>
+    <path d="M620 420 L720 400 L780 480 L740 560 L640 560 L600 480 L620 420" fill="none"/>
+    <path d="M880 560 L960 600 L1050 560 L1100 640" fill="none"/>
+    <path d="M420 740 L520 700 L610 760 L700 720" fill="none"/>
+  </g>
+
+  <!-- the stars themselves -->
+  <g fill="#f3ead6">
+    <circle cx="170" cy="210" r="6"/><circle cx="260" cy="160" r="7.4"/><circle cx="360" cy="200" r="5.4"/>
+    <circle cx="410" cy="300" r="6.6"/><circle cx="330" cy="360" r="5"/>
+    <circle cx="540" cy="140" r="5.6"/><circle cx="640" cy="180" r="7"/><circle cx="700" cy="120" r="5"/><circle cx="800" cy="160" r="6.2"/>
+    <circle cx="900" cy="260" r="6.8"/><circle cx="980" cy="220" r="5.2"/><circle cx="1060" cy="280" r="6"/><circle cx="1020" cy="380" r="5.4"/><circle cx="920" cy="400" r="6.4"/>
+    <circle cx="240" cy="520" r="6.2"/><circle cx="330" cy="480" r="5.2"/><circle cx="420" cy="540" r="7"/><circle cx="400" cy="640" r="5.2"/><circle cx="300" cy="660" r="6"/>
+    <circle cx="620" cy="420" r="5.6"/><circle cx="720" cy="400" r="6.6"/><circle cx="780" cy="480" r="5.2"/><circle cx="740" cy="560" r="6.2"/><circle cx="640" cy="560" r="5"/><circle cx="600" cy="480" r="5.8"/>
+    <circle cx="880" cy="560" r="5.4"/><circle cx="960" cy="600" r="6.6"/><circle cx="1050" cy="560" r="5.2"/><circle cx="1100" cy="640" r="6"/>
+    <circle cx="420" cy="740" r="6"/><circle cx="520" cy="700" r="5.4"/><circle cx="610" cy="760" r="6.8"/><circle cx="700" cy="720" r="5"/>
+  </g>
+
+  <!-- unjoined strays: the ones still finding their pattern -->
+  <g fill="#efe7d2" opacity="0.6">
+    <circle cx="100" cy="90" r="3"/><circle cx="1120" cy="120" r="3.4"/><circle cx="80" cy="760" r="3"/>
+    <circle cx="1140" cy="820" r="3.2"/><circle cx="520" cy="300" r="2.8"/><circle cx="820" cy="680" r="3"/>
+    <circle cx="150" cy="640" r="2.6"/><circle cx="480" cy="60" r="2.6"/><circle cx="960" cy="80" r="2.8"/>
+    <circle cx="240" cy="820" r="3"/><circle cx="760" cy="840" r="2.6"/><circle cx="1060" cy="460" r="2.8"/>
+  </g>
+
+  <rect width="1200" height="900" filter="url(#grain)" opacity="0.5" fill="#000" fill-opacity="0"/>
+</svg>

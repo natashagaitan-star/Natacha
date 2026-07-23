@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" role="img" aria-label="Saturn Return">
+  <defs>
+    <filter id="paint" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="3" seed="41" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="14"/>
+    </filter>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="13"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.08"/></feComponentTransfer>
+      <feComposite operator="over" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+
+  <rect width="1080" height="1080" fill="#10142a"/>
+  <g filter="url(#paint)">
+    <path d="M-40 -30 L1120 -30 L1120 300 Q640 380 300 310 T-40 330 Z" fill="#171c3a" opacity="0.95"/>
+    <path d="M-40 700 Q420 620 760 710 T1120 690 L1120 1120 L-40 1120 Z" fill="#0c0f20" opacity="0.95"/>
+    <path d="M-40 420 q340 -80 640 0 q-300 90 -640 40 z" fill="#232a55" opacity="0.55"/>
+  </g>
+
+  <!-- long dark, few stars -->
+  <g fill="#efe7d2">
+    <circle cx="150" cy="150" r="3" opacity="0.7"/><circle cx="940" cy="120" r="3.4" opacity="0.8"/>
+    <circle cx="1000" cy="520" r="2.6" opacity="0.5"/><circle cx="90" cy="640" r="2.8" opacity="0.55"/>
+    <circle cx="220" cy="960" r="3" opacity="0.6"/><circle cx="900" cy="920" r="2.6" opacity="0.5"/>
+    <circle cx="560" cy="90" r="2.4" opacity="0.5"/><circle cx="80" cy="380" r="2.4" opacity="0.5"/>
+  </g>
+
+  <!-- saturn -->
+  <g filter="url(#paint)">
+    <!-- ring behind -->
+    <path d="M 190 640 A 380 132 -18 0 1 800 380" fill="none" stroke="#8d84b8" stroke-width="26" opacity="0.55" stroke-linecap="round"/>
+    <!-- body -->
+    <circle cx="540" cy="520" r="190" fill="#cf9c44"/>
+    <circle cx="540" cy="520" r="190" fill="none" stroke="#e8c37c" stroke-width="10" opacity="0.55"/>
+    <!-- banding -->
+    <path d="M368 470 q170 -52 344 -6" stroke="#b57f2e" stroke-width="16" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <path d="M356 540 q186 44 368 6" stroke="#e8c37c" stroke-width="14" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <path d="M380 604 q160 40 320 -2" stroke="#a26d24" stroke-width="12" fill="none" stroke-linecap="round" opacity="0.5"/>
+    <!-- ring in front: the open hand -->
+    <path d="M 190 640 A 380 132 -18 0 0 894 424" fill="none" stroke="#c8c0e0" stroke-width="30" stroke-linecap="round"/>
+    <path d="M 232 656 A 340 112 -18 0 0 856 452" fill="none" stroke="#8d84b8" stroke-width="12" stroke-linecap="round" opacity="0.8"/>
+    <!-- a single small moon in attendance -->
+    <circle cx="860" cy="250" r="20" fill="#f3ead6"/>
+  </g>
+
+  <rect width="1080" height="1080" filter="url(#grain)" opacity="0.5" fill="#000" fill-opacity="0"/>
+</svg>

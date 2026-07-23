@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" role="img" aria-label="Between Two Dreams">
+  <defs>
+    <filter id="paint" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.013" numOctaves="3" seed="121" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="12"/>
+    </filter>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="43"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.07"/></feComponentTransfer>
+      <feComposite operator="over" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+
+  <!-- breathing-room ivory corridor -->
+  <rect width="1080" height="1080" fill="#efe8d8"/>
+  <g filter="url(#paint)" opacity="0.6">
+    <path d="M-40 -30 L1120 -30 L1120 160 Q560 220 200 170 T-40 190 Z" fill="#e4dac2"/>
+    <path d="M-40 900 Q420 850 800 910 T1120 900 L1120 1120 L-40 1120 Z" fill="#e0d5ba"/>
+  </g>
+
+  <!-- left arch: the dream you are leaving (night) -->
+  <g filter="url(#paint)">
+    <path d="M150 900 L150 430 A 165 165 0 0 1 480 430 L480 900 Z" fill="#151a33"/>
+    <!-- its weather -->
+    <circle cx="315" cy="480" r="52" fill="#f3ead6"/>
+    <g fill="#efe7d2">
+      <circle cx="230" cy="560" r="4" opacity="0.85"/><circle cx="390" cy="540" r="3.4" opacity="0.75"/>
+      <circle cx="270" cy="650" r="3.6" opacity="0.8"/><circle cx="360" cy="700" r="3" opacity="0.7"/>
+      <circle cx="220" cy="760" r="3.2" opacity="0.7"/><circle cx="400" cy="800" r="3.6" opacity="0.75"/>
+      <circle cx="310" cy="840" r="3" opacity="0.65"/>
+    </g>
+    <path d="M180 880 q140 -30 270 0" stroke="#272c4b" stroke-width="14" fill="none" stroke-linecap="round" opacity="0.8"/>
+    <!-- arch frame -->
+    <path d="M150 900 L150 430 A 165 165 0 0 1 480 430 L480 900" fill="none" stroke="#b8a67e" stroke-width="10" opacity="0.9"/>
+  </g>
+
+  <!-- right arch: the dream that is waiting (dawn) -->
+  <g filter="url(#paint)">
+    <path d="M600 900 L600 430 A 165 165 0 0 1 930 430 L930 900 Z" fill="#d99b6a"/>
+    <path d="M600 620 Q700 570 800 620 T930 610 L930 900 L600 900 Z" fill="#c07a55" opacity="0.9"/>
+    <circle cx="690" cy="500" r="62" fill="#e8b95c"/>
+    <circle cx="690" cy="500" r="62" fill="none" stroke="#f2d391" stroke-width="7" opacity="0.7"/>
+    <!-- dawn birds, drifting toward the upper corner -->
+    <g stroke="#5c3a28" stroke-width="6" fill="none" stroke-linecap="round">
+      <path d="M812 452 q14 -14 28 0 q14 -14 28 0"/>
+      <path d="M852 512 q11 -11 22 0 q11 -11 22 0"/>
+      <path d="M796 560 q9 -9 18 0 q9 -9 18 0"/>
+    </g>
+    <path d="M630 880 q140 -26 270 0" stroke="#8e5a42" stroke-width="14" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <path d="M600 900 L600 430 A 165 165 0 0 1 930 430 L930 900" fill="none" stroke="#b8a67e" stroke-width="10" opacity="0.9"/>
+  </g>
+
+  <!-- the corridor floor, a pause belonging to no story -->
+  <path d="M110 920 q430 -24 860 0" stroke="#c9b98c" stroke-width="6" fill="none" opacity="0.6" filter="url(#paint)"/>
+
+  <rect width="1080" height="1080" filter="url(#grain)" opacity="0.5" fill="#000" fill-opacity="0"/>
+</svg>

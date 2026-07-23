@@ -1,0 +1,156 @@
+@import "tailwindcss";
+
+@theme {
+  /* — Palette: warm gallery neutrals + cosmic depths + earthen accents — */
+  --color-cream: #f5efe4;
+  --color-ivory: #faf6ec;
+  --color-sand: #e7dcc6;
+  --color-rose: #c69b92;
+  --color-rose-deep: #a97466;
+  --color-clay: #b0755e;
+  --color-terra: #a24e36;
+  --color-indigo: #272c4b;
+  --color-midnight: #151a33;
+  --color-night: #0e1226;
+  --color-lavender: #a79fc4;
+  --color-ochre: #c0913f;
+  --color-gold: #b08d4f;
+  --color-charcoal: #34312c;
+  --color-ink: #26231f;
+
+  --font-display: var(--font-fraunces), "Georgia", serif;
+  --font-sans: var(--font-albert), "Helvetica Neue", sans-serif;
+
+  --ease-gallery: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --tracking-label: 0.32em;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-indigo);
+  color: var(--color-ivory);
+}
+
+:focus-visible {
+  outline: 1.5px solid var(--color-gold);
+  outline-offset: 3px;
+}
+
+/* — Editorial utilities — */
+@utility label {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+@utility display {
+  font-family: var(--font-display);
+  font-weight: 300;
+  line-height: 1.02;
+  letter-spacing: -0.015em;
+}
+
+@utility display-italic {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 300;
+}
+
+@utility hairline {
+  height: 1px;
+  background: currentColor;
+  opacity: 0.18;
+}
+
+/* Underline that draws in from the left on hover */
+@utility link-draw {
+  position: relative;
+}
+.link-draw::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  height: 1px;
+  width: 100%;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.6s var(--ease-gallery);
+}
+.link-draw:hover::after,
+.link-draw:focus-visible::after {
+  transform: scaleX(1);
+}
+
+/* Artwork frames — a breath of ivory around every canvas */
+@utility frame {
+  background: var(--color-ivory);
+  padding: clamp(0.75rem, 2vw, 1.5rem);
+  box-shadow:
+    0 1px 2px rgb(21 26 51 / 0.05),
+    0 12px 40px -12px rgb(21 26 51 / 0.18);
+}
+
+/* Slow ken-burns style drift for hero artwork */
+@keyframes drift {
+  from {
+    transform: scale(1.06) translateY(0.5%);
+  }
+  to {
+    transform: scale(1.12) translateY(-0.5%);
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Masonry columns for the gallery */
+@utility masonry {
+  columns: 1;
+  column-gap: clamp(1.5rem, 3vw, 3rem);
+}
+@media (min-width: 640px) {
+  .masonry {
+    columns: 2;
+  }
+}
+@media (min-width: 1024px) {
+  .masonry {
+    columns: 3;
+  }
+}
