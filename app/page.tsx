@@ -2,13 +2,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArtworkCard } from "@/components/ArtworkCard";
 import { Reveal, DrawnLine } from "@/components/Reveal";
-import { featured, artworks } from "@/lib/artworks";
+import { artworks } from "@/lib/artworks";
 import { collections } from "@/lib/collections";
 import { posts } from "@/lib/journal";
 import { book, site } from "@/lib/site";
 
 export default function Home() {
-  const hero = artworks.find((a) => a.slug === "a-journey-into-his-mind")!;
+  const hero = artworks.find(
+    (a) => a.slug === "youre-just-a-painting-on-my-wall-now",
+  )!;
   const aboutWork = artworks.find((a) => a.slug === "why-are-you-here")!;
   const latest = posts.slice(0, 2);
 
@@ -90,7 +92,7 @@ export default function Home() {
       <section className="mx-auto max-w-[1400px] px-6 pb-28 md:px-10 md:pb-44">
         <Reveal className="flex items-end justify-between gap-6">
           <div>
-            <p className="label text-clay">Featured works</p>
+            <p className="label text-clay">The complete works</p>
             <h2 className="display mt-5 text-4xl md:text-6xl">
               The current <span className="display-italic">exhibition</span>
             </h2>
@@ -102,9 +104,9 @@ export default function Home() {
         <DrawnLine className="mt-10 mb-14" />
 
         <div className="masonry">
-          {featured.map((a, i) => (
+          {artworks.map((a, i) => (
             <Reveal key={a.slug} delay={(i % 3) * 0.12} className="mb-8 md:mb-12">
-              <ArtworkCard artwork={a} />
+              <ArtworkCard artwork={a} priority={i < 3} />
             </Reveal>
           ))}
         </div>
