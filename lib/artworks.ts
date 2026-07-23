@@ -28,12 +28,17 @@ export type Artwork = {
 };
 
 /**
- * ⚠️ IMAGE–TITLE PAIRINGS ARE LOCKED — confirmed by Natasha via Mitch,
- * 2026-07-23. Do NOT reassign images between titles. Final mapping:
- *   A Journey Into His Mind        = red starburst + dotted charcoal panel
- *   Unbound                        = dense chaotic multi-world canvas
+ * ⚠️ IMAGE–TITLE PAIRINGS ARE LOCKED — answered painting-by-painting by
+ * Mitch on 2026-07-23 via an explicit picture-to-title questionnaire
+ * (absolute pairings, not relative swaps). Do NOT reassign images
+ * between titles, ever, without Mitch naming both the picture and the
+ * title in the same sentence. Final mapping:
+ *   Unbound                        = red starburst + dotted charcoal panel
+ *                                    (the hero visual)
  *   You're Just a Painting on
- *     My Wall Now                  = warm/cool split with rings and orbs
+ *     My Wall Now                  = dense multi-scene canvas (green face,
+ *                                    tic-tac-toe, birds, spiral)
+ *   A Journey Into His Mind        = warm/cool split with rings and orbs
  *   Only Human                     = purple hand with painted fingers
  *   Why Are You Here               = handprints on dark/amber fields
  *   It's a Boy's World             = boy with open head (heart + dollar sign)
@@ -50,8 +55,8 @@ export const artworks: Artwork[] = [
     dimensionsCm: "40.6 × 50.8 cm",
     status: "available",
     image: "/art/a-journey-into-his-mind.jpg",
-    ratio: 1600 / 1301,
-    alt: "A vermilion starburst form with golden centres reaching across a deep cobalt field, beside a charcoal panel traced with dotted white pathways like the map of a mind.",
+    ratio: 1600 / 1351,
+    alt: "A mind in two weathers — a warm amber field with interlocking rings and a deep red orb beside a midnight blue field of stars, small framed thoughts scattered between.",
     line: "The invisible architecture of thought.",
     featured: true,
     story: [
@@ -188,8 +193,8 @@ export const artworks: Artwork[] = [
     dimensionsCm: "50.8 × 40.6 cm",
     status: "available",
     image: "/art/youre-just-a-painting-on-my-wall-now.jpg",
-    ratio: 1600 / 1351,
-    alt: "A warm amber world and a deep blue starfield divided across one canvas — rings interlocking, a red sun cooling, a small framed picture hanging quietly within the painting.",
+    ratio: 1600 / 1227,
+    alt: "A whole chapter compressed onto one canvas — dense small scenes, a green face, tic-tac-toe marks, birds, a red heart and a silver spiral — now held at observing distance.",
     line: "What once undid me now hangs quietly.",
     story: [
       "An exploration of heartbreak, memory, and transformation.",
@@ -227,8 +232,8 @@ export const artworks: Artwork[] = [
     dimensionsCm: "50.8 × 40.6 cm",
     status: "available",
     image: "/art/unbound.jpg",
-    ratio: 1600 / 1227,
-    alt: "A dense, unruly field of saturated worlds — a green face, tic-tac-toe marks, birds in flight, a red heart, a silver spiral, small figures and structures crowding every edge of the canvas.",
+    ratio: 1600 / 1301,
+    alt: "A vermilion starburst with golden seed-centres breaking free across a deep cobalt field, escaping a charcoal panel traced with dotted white lines.",
     line: "Beyond the worlds we are given.",
     story: [
       "Unbound is an exploration of liberation, transformation, and the invisible structures we move through.",
