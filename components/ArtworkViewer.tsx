@@ -97,7 +97,7 @@ export function ArtworkViewer({ artwork }: { artwork: Artwork }) {
             <button
               type="button"
               onClick={close}
-              className="label absolute top-5 right-6 cursor-pointer text-ivory/80 transition-opacity hover:opacity-60 md:right-10"
+              className="label absolute top-2 right-3 cursor-pointer p-3.5 text-ivory/80 transition-opacity hover:opacity-60 md:right-7"
             >
               Close
             </button>

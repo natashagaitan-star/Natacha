@@ -53,7 +53,7 @@ export function Nav() {
       >
         <Link
           href="/"
-          className="display z-50 text-xl tracking-wide transition-opacity duration-500 hover:opacity-70"
+          className="display z-50 py-2 -my-2 text-xl tracking-wide transition-opacity duration-500 hover:opacity-70"
         >
           {site.name}
         </Link>
@@ -81,7 +81,7 @@ export function Nav() {
           aria-expanded={open}
           aria-label={open ? "Close menu" : "Open menu"}
           onClick={() => setOpen((v) => !v)}
-          className="label z-50 cursor-pointer py-2 lg:hidden"
+          className="label z-50 -mx-3 -my-1 cursor-pointer px-3 py-3.5 lg:hidden"
         >
           {open ? "Close" : "Menu"}
         </button>

@@ -38,12 +38,12 @@ export function Footer() {
           </div>
           <nav aria-label="Footer">
             <p className="label text-ivory/40">Visit</p>
-            <ul className="mt-5 space-y-3">
+            <ul className="mt-4 space-y-1">
               {[...nav, ...footerNav].map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="link-draw text-sm text-ivory/75 transition-opacity duration-500 hover:text-ivory"
+                    className="link-draw inline-block py-1.5 text-sm text-ivory/75 transition-opacity duration-500 hover:text-ivory"
                   >
                     {item.label}
                   </Link>
@@ -53,24 +53,24 @@ export function Footer() {
           </nav>
           <div>
             <p className="label text-ivory/40">Elsewhere</p>
-            <ul className="mt-5 space-y-3">
+            <ul className="mt-4 space-y-1">
               <li>
-                <a href={site.instagram} rel="noopener noreferrer" target="_blank" className="link-draw text-sm text-ivory/75 hover:text-ivory">
+                <a href={site.instagram} rel="noopener noreferrer" target="_blank" className="link-draw inline-block py-1.5 text-sm text-ivory/75 hover:text-ivory">
                   Instagram
                 </a>
               </li>
               <li>
-                <a href={site.pinterest} rel="noopener noreferrer" target="_blank" className="link-draw text-sm text-ivory/75 hover:text-ivory">
+                <a href={site.pinterest} rel="noopener noreferrer" target="_blank" className="link-draw inline-block py-1.5 text-sm text-ivory/75 hover:text-ivory">
                   Pinterest
                 </a>
               </li>
               <li>
-                <a href={book.url} rel="noopener noreferrer" target="_blank" className="link-draw text-sm text-ivory/75 hover:text-ivory">
+                <a href={book.url} rel="noopener noreferrer" target="_blank" className="link-draw inline-block py-1.5 text-sm text-ivory/75 hover:text-ivory">
                   The book — {book.title}
                 </a>
               </li>
               <li>
-                <a href={`mailto:${site.email}`} className="link-draw text-sm text-ivory/75 hover:text-ivory">
+                <a href={`mailto:${site.email}`} className="link-draw inline-block py-1.5 text-sm text-ivory/75 hover:text-ivory">
                   {site.email}
                 </a>
               </li>

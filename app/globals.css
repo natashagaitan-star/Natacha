@@ -63,7 +63,7 @@ body {
 /* — Editorial utilities — */
 @utility label {
   font-family: var(--font-sans);
-  font-size: 0.6875rem;
+  font-size: 0.75rem;
   letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   font-weight: 500;
@@ -88,9 +88,16 @@ body {
   opacity: 0.18;
 }
 
-/* Underline that draws in from the left on hover */
+/* Underline that draws in from the left on hover.
+   ::before invisibly extends the tap target vertically (mobile a11y)
+   without shifting layout. */
 @utility link-draw {
   position: relative;
+}
+.link-draw::before {
+  content: "";
+  position: absolute;
+  inset: -0.55rem 0;
 }
 .link-draw::after {
   content: "";

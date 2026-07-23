@@ -43,7 +43,7 @@ export function NewsletterForm({ dark = false }: { dark?: boolean }) {
       </label>
       <button
         type="submit"
-        className={`label cursor-pointer border-b pb-3 transition-opacity duration-500 hover:opacity-60 ${
+        className={`label cursor-pointer border-b px-2 pt-3 pb-3 transition-opacity duration-500 hover:opacity-60 ${
           dark ? "border-ivory/30 text-ivory" : "border-ink/30 text-ink"
         }`}
       >
